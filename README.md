@@ -42,7 +42,7 @@ matcher.summary()
 matched_data = matcher.get_matched_data()
 
 # Access treatment effects
-print(f"ATE: {matcher.ate_}")
+print(f"CATE: {matcher.ate_}")
 ```
 
 ## Examples
