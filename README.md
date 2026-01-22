@@ -2,6 +2,9 @@
 
 A Python library for causal inference using Two-Stage Interpretable Matching (TIM), which combines covariate importance weighting with exact matching for robust treatment effect estimation.
 
+**📄 Paper:** [Read the full paper](https://www.tandfonline.com/doi/full/10.1080/24725579.2025.2596393) 
+
+
 ## Features
 
 - Automated confounder importance calculation
