@@ -258,8 +258,8 @@ class TIMatcher:
         print(f"  Final overlap (L1): {self.overlap_final_:.4f}")
         print()
         print("Treatment Effects:")
-        print(f"  ATE: {self.ate_:.4f}")
-        print(f"  ATT: {self.att_:.4f}")
+        print(f"  CATE: {self.ate_:.4f}")
+        #print(f"  ATT: {self.att_:.4f}")
         print("=" * 60)
     
     def get_matched_data(self):
