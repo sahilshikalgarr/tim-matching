@@ -8,7 +8,7 @@ A Python library for causal inference using Two-Stage Interpretable Matching (TI
 - Coarsened Exact Matching (CEM) with variable prioritization
 - Unified distance metrics for mixed continuous/discrete covariates
 - Inverse distance weighting for improved balance
-- ATE and ATT estimation with proper weights
+- CATE estimation with proper weights
 
 ## Installation
 ```bash
