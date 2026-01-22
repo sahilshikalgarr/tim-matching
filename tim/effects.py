@@ -1,11 +1,9 @@
 """
 Treatment effect estimation
 """
-
-
-def calculate_ate_att(matched_dfs, treatment, outcome, weight):
+def calculate_ate(matched_dfs, treatment, outcome, weight):
     """
-    Calculate Average Treatment Effect (ATE) and Average Treatment Effect on Treated (ATT).
+    Calculate Conditional Average Treatment Effect (CATE).
     
     Parameters
     ----------
@@ -20,11 +18,10 @@ def calculate_ate_att(matched_dfs, treatment, outcome, weight):
         
     Returns
     -------
-    tuple
-        (final_ate, final_att)
+    float
+       Conditional Average Treatment Effect (CATE)
     """
     ate_list = []
-    att_list = []
     
     for covariates, matched_df in matched_dfs:
         if {treatment, outcome, weight}.issubset(matched_df.columns):
@@ -46,12 +43,7 @@ def calculate_ate_att(matched_dfs, treatment, outcome, weight):
             
             for _ in range(n_treat):
                 ate_list.append(ate)
-            
-            att = ((treated[outcome] * treated[weight]).sum() / treated[weight].sum() -
-                  (control[outcome] * control[weight]).sum() / control[weight].sum())
-            att_list.append(att)
     
     final_ate = sum(ate_list) / len(ate_list) if ate_list else None
-    final_att = sum(att_list) / len(att_list) if att_list else None
     
-    return final_ate, final_att
+    return final_ate
