@@ -88,6 +88,5 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## Acknowledgments
 
 Based on research from Decision Analytics Lab at Northeastern University.
-```
 
 
