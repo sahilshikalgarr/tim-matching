@@ -152,7 +152,7 @@ class TIMatcher:
         
         # Step 6: Calculate treatment effects
         print("Calculating treatment effects...")
-        self.ate_, self.att_ = calculate_ate_att(
+        self.ate_ = calculate_ate(
             matched_dfs=matched_strata,
             treatment=self.treatment_col,
             outcome=self.outcome_col,
